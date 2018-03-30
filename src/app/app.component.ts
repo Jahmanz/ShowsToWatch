@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Task } from './models/task.model';
+import { Show } from './models/task.model';
 
 @Component({
   selector: 'app-root',
@@ -12,23 +12,23 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
-  selectedTask = null;
+  selectedShow = null;
 
-  masterTaskList: Task[] = [
-    new Task('Finish weekend Angular homework for Epicodus course', 3),
-    new Task('Begin brainstorming possible JavaScript group projects', 2),
-    new Task('Add README file to last few Angular repos on GitHub', 2)
+  masterShowList: Show[] = [
+    new Show('Finish weekend Angular homework for Epicodus course', 3),
+    new Show('Begin brainstorming possible JavaScript group projects', 2),
+    new Show('Add README file to last few Angular repos on GitHub', 2)
   ];
 
-  editTask(clickedTask) {
-    this.selectedTask = clickedTask;
+  editShow(clickedShow) {
+    this.selectedShow = clickedShow;
   }
 
   finishedEditing() {
-   this.selectedTask = null;
+   this.selectedShow = null;
  }
- addTask(newTask: Task) {
-   this.masterTaskList.push(newTask);
+ addShow(newShow: Show) {
+   this.masterShowList.push(newShow);
  }
 
 }

@@ -6,22 +6,22 @@
 
 <h1>To Do List for {{month}}/{{day}}/{{year}}</h1>
 <h3>{{currentFocus}}</h3>
-<app-task-list [childTaskList]="masterTaskList" (clickSender)="editTask($event)"></app-task-list>
+<app-task-list [childShowList]="masterShowList" (clickSender)="editShow($event)"></app-task-list>
 
 
- <div *ngIf="selectedTask">
- <h3>{{selectedTask.description}}</h3>
- <p>Task Complete? {{selectedTask.done}}</p>
- <h3>Edit Task</h3>
- <label>Enter Task Description:</label>
- <input [(ngModel)]="selectedTask.description">
- <label>Enter Task Priority (1-3):</label>
+ <div *ngIf="selectedShow">
+ <h3>{{selectedShow.description}}</h3>
+ <p>Show Complete? {{selectedShow.done}}</p>
+ <h3>Edit Show</h3>
+ <label>Enter Show Description:</label>
+ <input [(ngModel)]="selectedShow.description">
+ <label>Enter Show Priority (1-3):</label>
  <br>
- <input type="radio" [(ngModel)]="selectedTask.priority" [value]="1">1 (Low Priority)<br>
- <input type="radio" [(ngModel)]="selectedTask.priority" [value]="2">2 (Medium Priority)<br>
- <input type="radio" [(ngModel)]="selectedTask.priority" [value]="3">3 (High Priority)
- <app-edit-task [childSelectedTask]="selectedTask" (clickedDone)="finishedEditing()"></app-edit-task>
+ <input type="radio" [(ngModel)]="selectedShow.priority" [value]="1">1 (Low Priority)<br>
+ <input type="radio" [(ngModel)]="selectedShow.priority" [value]="2">2 (Medium Priority)<br>
+ <input type="radio" [(ngModel)]="selectedShow.priority" [value]="3">3 (High Priority)
+ <app-edit-task [childSelectedShow]="selectedShow" (clickedDone)="finishedEditing()"></app-edit-task>
 </div>
 
-<app-edit-task [childSelectedTask]="selectedTask" (doneButtonClickedSender)="finishedEditing()"></app-edit-task>
-<app-new-task (sendTask)="addTask($event)"></app-new-task>
+<app-edit-task [childSelectedShow]="selectedShow" (doneButtonClickedSender)="finishedEditing()"></app-edit-task>
+<app-new-task (sendShow)="addShow($event)"></app-new-task>

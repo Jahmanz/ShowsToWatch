@@ -1,4 +1,4 @@
-export class Task {
+export class Show {
   public done: boolean = false;
   constructor(public description: string, public priority: number) {   }
 }

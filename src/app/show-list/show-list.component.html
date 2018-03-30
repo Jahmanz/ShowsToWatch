@@ -1,0 +1,13 @@
+<select (change)="onChange($event.target.value)">
+  <option value="allShows">All Shows</option>
+  <option value="completedShows">Completed Shows</option>
+  <option value="incompleteShows" selected="selected">Incomplete Shows</option>
+</select>
+
+<<ul>
+  <li [class]="priorityColor(currentShow)" *ngFor="let currentShow of childShowList | completeness:filterByCompleteness">{{currentShow.description}} {{currentShow.priority}}
+    <input *ngIf="currentShow.done === true" type="checkbox" checked (click)="toggleDone(currentShow, false)"/>
+    <input *ngIf="currentShow.done === false" type="checkbox" (click)="toggleDone(currentShow, true)"/>
+    <button (click)="editButtonClicked(currentShow)">Edit!</button>
+  </li>
+</ul>
