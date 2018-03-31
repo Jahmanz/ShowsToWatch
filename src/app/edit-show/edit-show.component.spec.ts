@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditShowComponent } from './edit-task.component';
+import { EditShowComponent } from './edit-show.component';
 
 describe('EditShowComponent', () => {
   let component: EditShowComponent;

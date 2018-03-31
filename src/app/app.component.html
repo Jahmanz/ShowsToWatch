@@ -1,12 +1,13 @@
+<body>
 <h1>Welcome, {{userName}}!</h1>
 
 <form>
   <input [(ngModel)]="userName" type="text" name="user">
 </form>
 
-<h1>To Do List for {{month}}/{{day}}/{{year}}</h1>
+<h1>Show list for{{month}}/{{day}}/{{year}}</h1>
 <h3>{{currentFocus}}</h3>
-<app-task-list [childShowList]="masterShowList" (clickSender)="editShow($event)"></app-task-list>
+<app-show-list [childShowList]="masterShowList" (clickSender)="editShow($event)"></app-show-list>
 
 
  <div *ngIf="selectedShow">
@@ -20,8 +21,9 @@
  <input type="radio" [(ngModel)]="selectedShow.priority" [value]="1">1 (Low Priority)<br>
  <input type="radio" [(ngModel)]="selectedShow.priority" [value]="2">2 (Medium Priority)<br>
  <input type="radio" [(ngModel)]="selectedShow.priority" [value]="3">3 (High Priority)
- <app-edit-task [childSelectedShow]="selectedShow" (clickedDone)="finishedEditing()"></app-edit-task>
+ <app-edit-show [childSelectedShow]="selectedShow" (clickedDone)="finishedEditing()"></app-edit-show>
 </div>
 
-<app-edit-task [childSelectedShow]="selectedShow" (doneButtonClickedSender)="finishedEditing()"></app-edit-task>
-<app-new-task (sendShow)="addShow($event)"></app-new-task>
+<app-edit-show [childSelectedShow]="selectedShow" (doneButtonClickedSender)="finishedEditing()"></app-edit-show>
+<app-new-show (sendShow)="addShow($event)"></app-new-show>
+</body>

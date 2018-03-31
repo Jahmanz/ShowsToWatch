@@ -2,9 +2,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Show } from '../models/show.model';
 
 @Component({
-  selector: 'app-edit-task',
-  templateUrl: './edit-task.component.html',
-  styleUrls: ['./edit-task.component.css']
+  selector: 'app-edit-show',
+  templateUrl: './edit-show.component.html',
+  styleUrls: ['./edit-show.component.css']
 })
 export class EditShowComponent {
   @Input() childSelectedShow: Show;

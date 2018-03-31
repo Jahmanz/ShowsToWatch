@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowListComponent } from './task-list.component';
+import { ShowListComponent } from './show-list.component';
 
 describe('ShowListComponent', () => {
   let component: ShowListComponent;

@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Show} from './models/task.model';
+import {Show} from './models/show.model';
 
 @Pipe({
   name: "completeness",

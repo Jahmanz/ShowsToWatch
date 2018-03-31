@@ -1,10 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Show } from '../models/task.model';
+import { Show } from '../models/show.model';
 
 @Component({
-  selector: 'app-new-task',
-  templateUrl: './new-task.component.html',
-  styleUrls: ['./new-task.component.css']
+  selector: 'app-new-show',
+  templateUrl: './new-show.component.html',
+  styleUrls: ['./new-show.component.css']
 })
 export class NewShowComponent {
   @Output() sendShow = new EventEmitter();

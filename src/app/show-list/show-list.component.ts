@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Show } from '../models/task.model';
+import { Show } from '../models/show.model';
 
 @Component({
-  selector: 'app-task-list',
-  templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  selector: 'app-show-list',
+  templateUrl: './show-list.component.html',
+  styleUrls: ['./show-list.component.css']
 })
 export class ShowListComponent {
   @Input() childShowList: Show[];
@@ -12,8 +12,8 @@ export class ShowListComponent {
 
  filterByCompleteness: string = "incompleteShows";
 
-  editButtonClicked(taskToEdit: Show) {
-      this.clickSender.emit(taskToEdit);
+  editButtonClicked(showToEdit: Show) {
+      this.clickSender.emit(showToEdit);
     }
 
     onChange(optionFromMenu) {

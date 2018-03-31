@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Show } from './models/task.model';
+import { Show } from './models/show.model';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { Show } from './models/task.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentFocus: string = 'Angular Homework';
+  currentFocus: string = 'Shows to watch';
   currentTime = new Date();
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
@@ -15,9 +15,9 @@ export class AppComponent {
   selectedShow = null;
 
   masterShowList: Show[] = [
-    new Show('Finish weekend Angular homework for Epicodus course', 3),
-    new Show('Begin brainstorming possible JavaScript group projects', 2),
-    new Show('Add README file to last few Angular repos on GitHub', 2)
+    new Show('The Shield', 3),
+    new Show('Breaking Bad', 2),
+    new Show('House of Cards', 2)
   ];
 
   editShow(clickedShow) {
