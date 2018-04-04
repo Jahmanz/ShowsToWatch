@@ -21,7 +21,7 @@
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
-!.vscode/shows.json
+!.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
@@ -41,3 +41,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#Firebase credentials
+/src/app/api-keys.ts

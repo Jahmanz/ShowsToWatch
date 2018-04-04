@@ -1,29 +1,22 @@
-<body>
-<h1>Welcome, {{userName}}!</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">Jah's Shows to Watch</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="about">About</a></li>
+      <li><a routerLink="showlist">Show List</a></li>
+    </ul>
+  </div>
+</nav>
 
-<form>
-  <input [(ngModel)]="userName" type="text" name="user">
-</form>
-
-<h1>Show list for{{month}}/{{day}}/{{year}}</h1>
-<h3>{{currentFocus}}</h3>
-<app-show-list [childShowList]="masterShowList" (clickSender)="editShow($event)"></app-show-list>
-
-
- <div *ngIf="selectedShow">
- <h3>{{selectedShow.description}}</h3>
- <p>Show Complete? {{selectedShow.done}}</p>
- <h3>Edit Show</h3>
- <label>Enter Show Description:</label>
- <input [(ngModel)]="selectedShow.description">
- <label>Enter Show Priority (1-3):</label>
- <br>
- <input type="radio" [(ngModel)]="selectedShow.priority" [value]="1">1 (Low Priority)<br>
- <input type="radio" [(ngModel)]="selectedShow.priority" [value]="2">2 (Medium Priority)<br>
- <input type="radio" [(ngModel)]="selectedShow.priority" [value]="3">3 (High Priority)
- <app-edit-show [childSelectedShow]="selectedShow" (clickedDone)="finishedEditing()"></app-edit-show>
+<div class="container">
+  <h1>{{title}}</h1>
+  <router-outlet></router-outlet>
 </div>
 
-<app-edit-show [childSelectedShow]="selectedShow" (doneButtonClickedSender)="finishedEditing()"></app-edit-show>
-<app-new-show (sendShow)="addShow($event)"></app-new-show>
-</body>
+<footer class="footer">
+  <div class="container">
+    <a class="text-muted" routerLink="admin">Admin</a>
+  </div>
+</footer>

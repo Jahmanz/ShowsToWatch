@@ -1,16 +1,28 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Show } from '../models/show.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { ShowService } from '../show.service';
 
 @Component({
   selector: 'app-edit-show',
   templateUrl: './edit-show.component.html',
-  styleUrls: ['./edit-show.component.css']
+  styleUrls: ['./edit-show.component.css'],
+  providers: [ShowService]
 })
-export class EditShowComponent {
-  @Input() childSelectedShow: Show;
-  @Output() clickedDone = new EventEmitter();
+export class EditShowComponent implements OnInit {
+  @Input() selectedShow;
 
-  finishedEditing() {
-    this.clickedDone.emit();
+  constructor(private showService: ShowService) { }
+
+  ngOnInit() {
   }
+
+  beginUpdatingShow(showToUpdate){
+    this.showService.updateShow(showToUpdate);
+  }
+
+  beginDeletingShow(showToDelete){
+      if(confirm("Are you sure you want to delete this item from the inventory?")){
+        this.showService.deleteShow(showToDelete);
+      }
+    }
+
 }

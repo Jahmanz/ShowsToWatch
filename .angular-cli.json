@@ -1,12 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "to-do"
+    "name": "tunes"
   },
-  "styles": [
-  "styles.css",
-  "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-],
   "apps": [
     {
       "root": "src",
@@ -61,5 +57,4 @@
     "styleExt": "css",
     "component": {}
   }
-
 }
