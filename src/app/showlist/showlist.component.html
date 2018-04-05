@@ -1,5 +1,6 @@
 <!doctype html>
 <html ng-app>
+<body>
   <head>
     <script src="http://code.angularjs.org/1.2.6/angular.min.js"></script>
  </head>
@@ -8,7 +9,7 @@
 
 <h2>Show List</h2>
 
-<div *ngFor="let show of shows | async"  class="panel panel-default">
+<div *ngFor="let show of shows | async"  class="panel panel-default" [ngStyle]="myStyle">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(show)"><em>{{show.title}}</em> on {{show.network}}</h3>
     <div *ngIf="currentRoute === '/admin'">
@@ -18,3 +19,15 @@
     </div>
   </div>
 </div>
+
+
+  <input type="button" value="Red" (click)="myStyle={'background-color':'red'}">
+  <input type="button" value="Green" (click)="myStyle={background:'green'}">
+  <input type="button" value="Blue" (click)="myStyle={background:'blue'}">
+  <input type="button" value="Yellow" (click)="myStyle={background:'yellow'}">
+  <input type="button" value="Lime" (click)="myStyle={background:'lime'}">
+  <input type="button" value="Magenta" (click)="myStyle={background:'magenta'}">
+  <input type="button" value="Pink" (click)="myStyle={background:'pink'}">
+  <input type="button" value="White" (click)="myStyle={background:'white'}">
+</body>
+</html>

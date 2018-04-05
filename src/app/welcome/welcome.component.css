@@ -2,6 +2,8 @@
 background-image: url("https://s1.gifyu.com/images/GIFMaker.org_Evs97V.gif");
 background-repeat: no-repeat;
 background-size: cover;
+background-color: #65889b;
+min-height: 1000px;
 }
 
 h1 {
@@ -16,6 +18,6 @@ h2 {
   font-weight: bold;
 }
 
-body {
-  background-color: black;
+html {
+  background-color: #65889b;
 }
