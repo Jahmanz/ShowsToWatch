@@ -12,7 +12,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [ShowService]
 })
 
-export class MarketplaceComponent implements OnInit {
+export class ShowlistComponent implements OnInit {
   shows: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 

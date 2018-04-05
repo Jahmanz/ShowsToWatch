@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent }   from './about/about.component';
-import { MarketplaceComponent }   from './showlist/showlist.component';
+import { ShowlistComponent }   from './showlist/showlist.component';
 import { ShowDetailComponent }   from './show-detail/show-detail.component';
 import { AdminComponent }   from './admin/admin.component';
 
@@ -17,7 +17,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'showlist',
-    component: MarketplaceComponent
+    component: ShowlistComponent
   },
   {
     path: 'shows/:id',

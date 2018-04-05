@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AdminComponent } from './admin/admin.component';
 import { AboutComponent } from './about/about.component';
-import { MarketplaceComponent } from './showlist/showlist.component';
+import { ShowlistComponent } from './showlist/showlist.component';
 import { ShowDetailComponent } from './show-detail/show-detail.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
@@ -26,7 +26,7 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    MarketplaceComponent,
+    ShowlistComponent,
     ShowDetailComponent,
     AdminComponent,
     EditShowComponent

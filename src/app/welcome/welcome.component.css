@@ -1,0 +1,21 @@
+.jumbotron {
+background-image: url("https://s1.gifyu.com/images/GIFMaker.org_Evs97V.gif");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+h1 {
+  text-shadow: 1px 1px 2px black, 0 0 1em #72caf9, 0 0 0.2em #72caf9;
+  color: white;
+  font: 1.5em Georgia, serif;
+}
+
+h2 {
+  text-shadow: 1px 1px 2px black, 0 0 1em #72caf9, 0 0 0.2em #72caf9;
+  color: white;
+  font-weight: bold;
+}
+
+body {
+  background-color: black;
+}

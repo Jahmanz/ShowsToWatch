@@ -1,5 +1,11 @@
-<div>
-  <h3>{{(showToDisplay | async)?.title}}</h3>
-  <h4>{{(showToDisplay | async)?.network}}</h4>
-  <p>{{(showToDisplay | async)?.description}}</p>
-</div>
+
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="http://code.angularjs.org/1.2.6/angular.min.js"></script>
+ </head>
+ <div>
+   <h3>{{(showToDisplay | async)?.title}}</h3>
+   <h4>{{(showToDisplay | async)?.network}}</h4>
+   <p>{{(showToDisplay | async)?.description}}</p>
+ </div>
