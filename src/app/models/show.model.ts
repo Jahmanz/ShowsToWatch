@@ -1,4 +1,4 @@
 export class Show {
   public done: boolean = false;
-  constructor(public title: string, public network: string, public description: string, public priority: number) {   }
+  constructor(public title: string, public network: string, public description: string, public youtube: string) {   }
 }

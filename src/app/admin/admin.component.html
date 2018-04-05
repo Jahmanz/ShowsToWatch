@@ -22,7 +22,14 @@
         <br>
         <textarea #newDescription></textarea>
       </div>
-      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value=''">Add</button>
+
+      <div>
+        <label>Trailer Link:</label>
+        <br>
+        <input #newTrailer>
+      </div>
+
+      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newTrailer.value); newTitle.value=''; newArtist.value=''; newDescription.value=''; newTrailer.value=''">Add</button>
     </div>
   </div>
 </div>

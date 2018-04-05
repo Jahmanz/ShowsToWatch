@@ -29,6 +29,5 @@ export class ShowDetailComponent implements OnInit {
      });
      this.showToDisplay = this.showService.getShowById(this.showId);
     }
-    
 
 }

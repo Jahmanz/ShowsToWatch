@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Show } from './models/show.model';
+import { EmbedVideoService } from 'ngx-embed-video';
 
 @Component({
   selector: 'app-root',
@@ -7,24 +7,22 @@ import { Show } from './models/show.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentFocus: string = 'Shows to watch';
-  currentTime = new Date();
-  month: number = this.currentTime.getMonth() + 1;
-  day: number = this.currentTime.getDate();
-  year: number = this.currentTime.getFullYear();
-  selectedShow = null;
+  title = 'Shows To Watch';
+  vimeoUrl = "https://vimeo.com/197933516";
+  youtubeUrl = "https://www.youtube.com/watch?v=iHhcHTlGtRs";
+  dailymotionUrl = "https://www.dailymotion.com/video/x20qnej_red-bull-presents-wild-ride-bmx-mtb-dirt_sport";
+    vimeoId = "197933516";
+    youtubeId = "iHhcHTlGtRs";
+    dailymotionId = "x20qnej";
+  constructor(
+    private embedService: EmbedVideoService
+  ) {
+    console.log(this.embedService.embed(this.vimeoUrl));
+    console.log(this.embedService.embed(this.youtubeUrl));
+    console.log(this.embedService.embed(this.dailymotionUrl));
 
-  masterShowList: Show[];
-
-  editShow(clickedShow) {
-    this.selectedShow = clickedShow;
+    console.log(this.embedService.embed_vimeo(this.vimeoId));
+    console.log(this.embedService.embed_youtube(this.youtubeId));
+    console.log(this.embedService.embed_dailymotion(this.dailymotionId));
   }
-
-  finishedEditing() {
-   this.selectedShow = null;
- }
- addShow(newShow: Show) {
-   this.masterShowList.push(newShow);
- }
-
 }

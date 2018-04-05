@@ -26,7 +26,8 @@ export class ShowService {
     var showEntryInFirebase = this.getShowById(localUpdatedShow.$key);
     showEntryInFirebase.update({title: localUpdatedShow.title,
                                 network: localUpdatedShow.network,
-                                description: localUpdatedShow.description});
+                                description: localUpdatedShow.description,
+                                trailer: localUpdatedShow.youtube});
   }
   deleteShow(localShowToDelete){
       var showEntryInFirebase = this.getShowById(localShowToDelete.$key);

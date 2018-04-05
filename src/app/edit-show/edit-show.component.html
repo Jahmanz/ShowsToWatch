@@ -7,6 +7,10 @@
 <br>
 <label>Synopsis:</label>
 <input [(ngModel)]="selectedShow.description">
+
+<label>Trailer:</label>
+<input [(ngModel)]="selectedShow.youtube">
+
 <button (click)="beginUpdatingShow(selectedShow)">Update</button>
 <hr>
 <button (click)="beginDeletingShow(selectedShow)">Delete</button>
