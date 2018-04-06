@@ -14,6 +14,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { EditShowComponent } from './edit-show/edit-show.component';
 import { EmbedVideo } from 'ngx-embed-video';
+import { ShowstowatchComponent } from './showstowatch/showstowatch.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     ShowlistComponent,
     ShowDetailComponent,
     AdminComponent,
-    EditShowComponent
+    EditShowComponent,
+    ShowstowatchComponent
   ],
   imports: [
     BrowserModule,
