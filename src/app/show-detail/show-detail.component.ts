@@ -3,12 +3,15 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Show } from '../show.model';
 import { ShowService } from '../show.service';
+import { ShowstoWatchService } from '../showstowatch.service';
+
 
 @Component({
   selector: 'app-show-detail',
   templateUrl: './show-detail.component.html',
   styleUrls: ['./show-detail.component.css'],
-  providers: [ShowService]
+  providers: [ShowService, ShowstoWatchService],
+
 })
 
 export class ShowDetailComponent implements OnInit {
@@ -19,7 +22,8 @@ export class ShowDetailComponent implements OnInit {
   constructor(
       private route: ActivatedRoute,
       private location: Location,
-      private showService: ShowService
+      private showService: ShowService,
+      private showstoWatchService: ShowstoWatchService
 
     ) {}
 
@@ -28,6 +32,8 @@ export class ShowDetailComponent implements OnInit {
        this.showId = urlParameters['id'];
      });
      this.showToDisplay = this.showService.getShowById(this.showId);
+     this.showToDisplay = this.showstoWatchService.getShowById(this.showId);
     }
+
 
 }

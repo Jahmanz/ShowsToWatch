@@ -23,6 +23,6 @@ export class ShowsToWatchComponent {
 }
 
   goToDetailPage(clickedShow) {
-    this.router.navigate(['showstowatch', clickedShow.$key]);
+    this.router.navigate(['shows', clickedShow.$key]);
   };
 }
