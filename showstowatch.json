@@ -1,0 +1,20 @@
+{ "showstowatch": [{
+    "title": " Krypton",
+    "network": "SYFY",
+    "trailer": "",
+    "description": "Superman's origins.",
+    "id": "1"
+    }, {
+    "title": "Atlanta",
+    "network": "FX",
+    "trailer": "",
+    "description": "Comedy about real life in Atlanta.",
+    "id": "2"
+      }, {
+    "title": "McMafia",
+    "network": "AMC",
+    "trailer": "",
+    "description": "Tales of an international crime family.",
+    "id": "3"
+  }]
+}

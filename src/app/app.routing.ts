@@ -1,7 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { AboutComponent }   from './about/about.component';
+import { ShowsToWatchComponent }   from './showstowatch/showstowatch.component';
 import { ShowlistComponent }   from './showlist/showlist.component';
 import { ShowDetailComponent }   from './show-detail/show-detail.component';
 import { AdminComponent }   from './admin/admin.component';
@@ -12,8 +12,8 @@ const appRoutes: Routes = [
      component: WelcomeComponent
    },
   {
-    path: 'about',
-    component: AboutComponent
+    path: 'showstowatch',
+    component: ShowsToWatchComponent
   },
   {
     path: 'showlist',

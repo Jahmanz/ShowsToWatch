@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Show } from '../show.model';
 import { Router } from '@angular/router';
-import { ShowService } from '../show.service';
+import { ShowstoWatchService } from '../showstowatch.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-showstowatch',
   templateUrl: './showstowatch.component.html',
   styleUrls: ['./showstowatch.component.css'],
-  providers: [ShowService]
+  providers: [ShowstoWatchService]
 
 })
 export class ShowsToWatchComponent {
-  shows: FirebaseListObservable<any[]>;
+  showstowatch: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
-  constructor(private router: Router, private showService: ShowService){}
+  constructor(private router: Router, private showToWatchService: ShowstoWatchService){}
 
   ngOnInit(){
-  this.shows = this.showService.getShows();
+  this.showstowatch = this.showToWatchService.getShowsToWatch();
 
 }
 
   goToDetailPage(clickedShow) {
-    this.router.navigate(['shows', clickedShow.$key]);
+    this.router.navigate(['showstowatch', clickedShow.$key]);
   };
 }

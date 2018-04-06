@@ -3,24 +3,24 @@ import { Show } from './show.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
-export class ShowService {
-  shows: FirebaseListObservable<any[]>;
+export class ShowstoWatchService {
+  showstowatch: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.shows = database.list('shows');
-    
+    this.showstowatch = database.list('showstowatch');
+
   }
 
-  getShows(){
-    return this.shows;
+  getShowsToWatch(){
+    return this.showstowatch;
   }
 
-  addShow(newShow: Show) {
-    this.shows.push(newShow);
+  addShowToWatch(newShow: Show) {
+    this.showstowatch.push(newShow);
   }
 
   getShowById(showId: string){
-    return this.database.object('/shows/' + showId);
+    return this.database.object('/showstowatch/' + showId);
   }
 
   updateShow(localUpdatedShow){
