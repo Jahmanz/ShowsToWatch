@@ -6,6 +6,8 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminComponent2 } from './admin/admin.component';
+
 import { ShowsToWatchComponent } from './showstowatch/showstowatch.component';
 import { ShowlistComponent } from './showlist/showlist.component';
 import { ShowDetailComponent } from './show-detail/show-detail.component';
@@ -13,6 +15,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { EditShowComponent } from './edit-show/edit-show.component';
+import { EditShowComponent2 } from './edit-show/edit-show.component';
 import { EmbedVideo } from 'ngx-embed-video';
 
 export const firebaseConfig = {

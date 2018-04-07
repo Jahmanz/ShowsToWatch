@@ -11,7 +11,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [ShowstoWatchService]
 
 })
-export class ShowsToWatchComponent {
+export class ShowsToWatchComponent implements OnInit {
   showstowatch: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
@@ -23,6 +23,6 @@ export class ShowsToWatchComponent {
 }
 
   goToDetailPage(clickedShow) {
-    this.router.navigate(['shows', clickedShow.$key]);
+    this.router.navigate(['showstowatch', clickedShow.$key]);
   };
 }

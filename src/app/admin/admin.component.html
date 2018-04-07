@@ -1,7 +1,7 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Add New Show to Inventory</h3>
+    <h3 class="panel-title">Add Watched to Inventory</h3>
   </div>
   <div class="panel-body">
     <div>
@@ -14,7 +14,7 @@
       <div>
         <label>Network:</label>
         <br>
-        <input #newArtist>
+        <input #newNetwork>
       </div>
 
       <div>
@@ -29,11 +29,50 @@
         <input #newTrailer>
       </div>
 
-      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newTrailer.value); newTitle.value=''; newArtist.value=''; newDescription.value=''; newTrailer.value=''">Add</button>
+      <button (click)="submitForm(newTitle.value, newNetwork.value, newDescription.value, newTrailer.value); newTitle.value=''; newNetwork.value=''; newDescription.value=''; newTrailer.value=''">Add</button>
     </div>
   </div>
 </div>
 
 <div>
   <app-showlist></app-showlist>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add show to be watched to Inventory</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Show Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <div>
+        <label>Network:</label>
+        <br>
+        <input #newNetwork>
+      </div>
+
+      <div>
+        <label>Synopsis:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+
+      <div>
+        <label>Trailer Link:</label>
+        <br>
+        <input #newTrailer>
+      </div>
+
+      <button (click)="submitForm(newTitle.value, newNetwork.value, newDescription.value, newTrailer.value); newTitle.value=''; newNetwork.value=''; newDescription.value=''; newTrailer.value=''">Add</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <app-showstowatch></app-showstowatch>
 </div>

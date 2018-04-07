@@ -23,7 +23,6 @@ export class ShowDetailComponent implements OnInit {
       private route: ActivatedRoute,
       private location: Location,
       private showService: ShowService,
-      private showstoWatchService: ShowstoWatchService
 
     ) {}
 
@@ -32,8 +31,27 @@ export class ShowDetailComponent implements OnInit {
        this.showId = urlParameters['id'];
      });
      this.showToDisplay = this.showService.getShowById(this.showId);
-     this.showToDisplay = this.showstoWatchService.getShowById(this.showId);
     }
+  }
+  export class ShowDetailComponent2 implements OnInit {
+    showId: string;
+    showToDisplay;
 
 
-}
+    constructor(
+        private route: ActivatedRoute,
+        private location: Location,
+        private showstoWatchService: ShowstoWatchService,
+
+      ) {}
+
+      ngOnInit() {
+        this.route.params.forEach((urlParameters) => {
+         this.showId = urlParameters['id'];
+       });
+       this.showToDisplay = this.showstoWatchService.getShowById(this.showId);
+      }
+
+
+
+  }

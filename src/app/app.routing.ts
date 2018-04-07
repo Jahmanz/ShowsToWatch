@@ -4,7 +4,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ShowsToWatchComponent }   from './showstowatch/showstowatch.component';
 import { ShowlistComponent }   from './showlist/showlist.component';
 import { ShowDetailComponent }   from './show-detail/show-detail.component';
+import { ShowDetailComponent2 }   from './show-detail/show-detail.component';
+
 import { AdminComponent }   from './admin/admin.component';
+import { AdminComponent2 }   from './admin/admin.component';
+
 
 const appRoutes: Routes = [
   {
@@ -24,8 +28,16 @@ const appRoutes: Routes = [
     component: ShowDetailComponent
   },
   {
+    path: 'showstowatch/:id',
+    component: ShowDetailComponent2
+  },
+  {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent2
   }
  ];
 
