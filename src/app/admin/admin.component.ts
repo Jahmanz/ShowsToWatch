@@ -27,7 +27,7 @@ export class AdminComponent implements OnInit {
 
 @Component({
   selector: 'app2-admin',
-  templateUrl: './admin.component.html',
+  templateUrl: './admin2.component.html',
   styleUrls: ['./admin.component.css'],
   providers: [ShowstoWatchService]
 })
