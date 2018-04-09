@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Show } from '../show.model';
+import { Show2 } from '../show.model';
 import { Router } from '@angular/router';
 import { ShowstoWatchService } from '../showstowatch.service';
 import { FirebaseListObservable } from 'angularfire2/database';

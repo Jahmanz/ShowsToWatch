@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Show } from './show.model';
+import { Show2 } from './show.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -15,7 +15,7 @@ export class ShowstoWatchService {
     return this.showstowatch;
   }
 
-  addShowToWatch(newShow: Show) {
+  addShowToWatch(newShow: Show2) {
     this.showstowatch.push(newShow);
   }
 

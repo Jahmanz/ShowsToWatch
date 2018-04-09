@@ -11,7 +11,11 @@ import { AdminComponent2 } from './admin/admin.component';
 import { ShowsToWatchComponent } from './showstowatch/showstowatch.component';
 import { ShowlistComponent } from './showlist/showlist.component';
 import { ShowDetailComponent } from './show-detail/show-detail.component';
+import { ShowDetailComponent2 } from './show-detail/show-detail.component';
 import { masterFirebaseConfig } from './api-keys';
+import { masterFirebaseConfig2} from './api-keys';
+
+
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { EditShowComponent } from './edit-show/edit-show.component';
@@ -25,6 +29,17 @@ export const firebaseConfig = {
   storageBucket: masterFirebaseConfig.storageBucket
 };
 
+export const firebaseConfig2 = {
+  apiKey: masterFirebaseConfig2.apiKey,
+  authDomain: masterFirebaseConfig2.authDomain,
+  databaseURL: masterFirebaseConfig2.databaseURL,
+  storageBucket: masterFirebaseConfig2.storageBucket
+};
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +48,16 @@ export const firebaseConfig = {
     ShowlistComponent,
     ShowDetailComponent,
     AdminComponent,
+    AdminComponent2,
     EditShowComponent,
+    EditShowComponent2,
 
   ],
+  // entryComponents: [
+  //   ShowDetailComponent2,
+  //   AdminComponent2,
+  // ],
+
   imports: [
     BrowserModule,
     FormsModule,
@@ -47,5 +69,7 @@ export const firebaseConfig = {
   ],
   providers: [],
   bootstrap: [AppComponent]
+
+
 })
 export class AppModule { }

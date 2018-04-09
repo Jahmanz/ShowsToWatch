@@ -6,7 +6,7 @@ import { ShowstoWatchService } from '../showstowatch.service';
   selector: 'app-edit-show',
   templateUrl: './edit-show.component.html',
   styleUrls: ['./edit-show.component.css'],
-  providers: [ShowService, ShowstoWatchService]
+  providers: [ShowService]
 })
 export class EditShowComponent implements OnInit {
   @Input() selectedShow;
@@ -27,6 +27,13 @@ export class EditShowComponent implements OnInit {
     }
 
 }
+
+@Component({
+  selector: 'app-edit2-show',
+  templateUrl: './edit-show.component.html',
+  styleUrls: ['./edit-show.component.css'],
+  providers: [ShowstoWatchService]
+})
 
 export class EditShowComponent2 implements OnInit {
   @Input() selectedShow;
