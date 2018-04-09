@@ -64,6 +64,7 @@ export const firebaseConfig2 = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig2),
     AngularFireDatabaseModule,
     EmbedVideo.forRoot()
   ],
