@@ -33,6 +33,15 @@ export class ShowDetailComponent implements OnInit {
      this.showToDisplay = this.showService.getShowById(this.showId);
     }
   }
+
+  @Component({
+    selector: 'app-show-detail',
+    templateUrl: './show-detail.component.html',
+    styleUrls: ['./show-detail.component.css'],
+    providers: [ShowService, ShowstoWatchService],
+
+  })
+
   export class ShowDetailComponent2 implements OnInit {
     showId: string;
     showToDisplay;

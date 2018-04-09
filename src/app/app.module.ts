@@ -47,6 +47,7 @@ export const firebaseConfig2 = {
     ShowsToWatchComponent,
     ShowlistComponent,
     ShowDetailComponent,
+    ShowDetailComponent2,
     AdminComponent,
     AdminComponent2,
     EditShowComponent,
