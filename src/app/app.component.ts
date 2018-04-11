@@ -7,7 +7,7 @@ import { EmbedVideoService } from 'ngx-embed-video';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Shows To Watch';
+  title = 'TV Show List';
   vimeoUrl = "https://vimeo.com/197933516";
   youtubeUrl = "https://www.youtube.com/watch?v=iHhcHTlGtRs";
   dailymotionUrl = "https://www.dailymotion.com/video/x20qnej_red-bull-presents-wild-ride-bmx-mtb-dirt_sport";

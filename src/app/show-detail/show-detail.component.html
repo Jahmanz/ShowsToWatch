@@ -8,8 +8,8 @@
  <div class="panel panel-default">
    <div class="panel-heading">
    <h3 class="panel-title">{{(showToDisplay | async)?.title}}</h3>
-   <h4>{{(showToDisplay | async)?.network}}</h4>
-   <p>{{(showToDisplay | async)?.description}}</p>
+   <h4>On {{(showToDisplay | async)?.network}}</h4>
+   <h5>{{(showToDisplay | async)?.description}}</h5>
 <a class="btn btn-primary btn-lg" href="{{(showToDisplay | async)?.trailer}}" role="button">Watch Trailer</a>
  </div>
  <div class="panel-body">
