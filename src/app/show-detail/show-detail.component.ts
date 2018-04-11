@@ -60,7 +60,4 @@ export class ShowDetailComponent implements OnInit {
        });
        this.showToDisplay = this.showstoWatchService.getShowById(this.showId);
       }
-
-
-
-  }
+    }

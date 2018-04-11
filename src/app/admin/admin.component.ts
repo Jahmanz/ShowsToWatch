@@ -19,8 +19,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(title: string, network: string, description: string, youtube: string) {
-    var newShow: Show = new Show(title, network, description, youtube);
+  submitForm(title: string, network: string, description: string, trailer: string) {
+    var newShow: Show = new Show(title, network, description, trailer);
     this.showService.addShow(newShow);
   }
 }
@@ -39,8 +39,8 @@ export class AdminComponent2 implements OnInit {
   ngOnInit() {
   }
 
-  submitForm2(title: string, network: string, description: string, youtube: string) {
-    var newShow: Show2 = new Show2(title, network, description, youtube);
+  submitForm2(title: string, network: string, description: string, trailer: string) {
+    var newShow: Show2 = new Show2(title, network, description, trailer);
     this.showtoWatchService.addShowToWatch(newShow);
   }
 }

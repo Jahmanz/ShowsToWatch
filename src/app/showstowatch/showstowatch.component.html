@@ -13,10 +13,10 @@
 <div *ngFor="let shows of showstowatch | async"  class="panel panel-default" [ngStyle]="myStyle">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(shows)"><em>{{shows.title}}</em> on {{shows.network}}</h3>
-    <div *ngIf="currentRoute === '/admin'">
+    <div *ngIf="currentRoute === '/admin2'">
       {{shows.description}}
       <hr>
-      <app-edit-show [selectedShow]="shows"></app-edit-show>
+      <app-edit2-show [selectedShow]="shows"></app-edit2-show>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@ export class ShowService {
 
   constructor(private database: AngularFireDatabase) {
     this.shows = database.list('shows');
-    
+
   }
 
   getShows(){
@@ -28,7 +28,7 @@ export class ShowService {
     showEntryInFirebase.update({title: localUpdatedShow.title,
                                 network: localUpdatedShow.network,
                                 description: localUpdatedShow.description,
-                                trailer: localUpdatedShow.youtube});
+                                trailer: localUpdatedShow.trailer});
   }
   deleteShow(localShowToDelete){
       var showEntryInFirebase = this.getShowById(localShowToDelete.$key);

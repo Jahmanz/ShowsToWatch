@@ -28,7 +28,7 @@ export class ShowstoWatchService {
     showEntryInFirebase.update({title: localUpdatedShow.title,
                                 network: localUpdatedShow.network,
                                 description: localUpdatedShow.description,
-                                trailer: localUpdatedShow.youtube});
+                                trailer: localUpdatedShow.trailer});
   }
   deleteShow(localShowToDelete){
       var showEntryInFirebase = this.getShowById(localShowToDelete.$key);

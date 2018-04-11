@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminComponent2 } from './admin/admin.component';
+import {DomSanitizer} from '@angular/platform-browser';
 
 import { ShowsToWatchComponent } from './showstowatch/showstowatch.component';
 import { ShowlistComponent } from './showlist/showlist.component';
